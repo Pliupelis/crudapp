@@ -1,2 +1,15 @@
 <%- include('include/_header') %>
+<main id="site-main">
+    <div class="box-nav">
+        <a href="/add/user" class="border">
+        <span class="text">New USER <i class="far fa-user"></i></span>
+        </a>
+    </div>
+    <form action="/" method="POST">
+    <table class="table">
+        <%- include('include/_show') %>
+    </table>
+    </form>
+    </div>
+</main>
 <%- include('include/_footer') %>

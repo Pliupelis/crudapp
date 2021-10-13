@@ -19,9 +19,14 @@ nav {
   margin: auto;
 }
 
-table {
+.radio {
+  display: inline;
+}
+
+.form {
   margin: auto;
   width: 80%;
+  text-align: center;
 }
 
 .btn {
@@ -29,6 +34,27 @@ table {
 }
 .btn:hover {
   border: 2px solid black;
+}
+
+table {
+  margin: auto;
+  width: 80%;
+}
+
+#add_user .form-group {
+  padding: 0.1rem 0;
+}
+#add_user .form-group label {
+  padding-right: 5px;
+}
+#add_user .form-group .btn {
+  padding: 0.5rem 0;
+  width: 100%;
+  font-weight: bold;
+  background-color: #a7a7a7;
+}
+#add_user .form-group .btn:hover {
+  background-color: #868686;
 }
 
 .table {
@@ -41,6 +67,7 @@ table {
   border-bottom: 1px solid white;
 }
 .table tr:first-child {
+  pointer-events: none;
   background-color: #025802;
 }
 .table tr:hover {

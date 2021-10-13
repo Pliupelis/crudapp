@@ -1,5 +1,6 @@
 $whiteish: #eee;
 $light: rgb(167, 167, 167);
+$darker: rgb(134, 134, 134);
 * {
   padding: 0;
   margin: 0;
@@ -19,32 +20,57 @@ nav {
   width: fit-content;
   margin: auto;
 }
+.radio {
+  display: inline;
+}
+.form {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+}
+
+.btn{
+  padding: 0 3px;
+  &:hover {
+    border: 2px solid black;
+  }
+}
 table {
   margin: auto;
   width: 80%;
 }
+#add_user .form-group{
+padding: .1rem 0;
+label{
+    padding-right: 5px;
+}
 .btn{
-    padding: 0 3px;
-    &:hover{
-    border: 2px solid black;
-    }
+    padding: .5rem 0;
+    width: 100%;
+    font-weight: bold;
+    background-color: $light;
+}
+.btn:hover{
+    background-color: $darker ;
+}
+
 }
 .table {
-    border-collapse: collapse;
+  border-collapse: collapse;
   td {
     text-align: center;
   }
   tr {
     border-bottom: 1px solid white;
   }
-  tr:first-child{
-     background-color: rgb(2, 88, 2);
+  tr:first-child {
+    pointer-events: none;
+    background-color: rgb(2, 88, 2);
   }
   tr:hover {
-     background-color: white;
+    background-color: white;
   }
 }
 a {
   text-decoration: none;
 }
-
