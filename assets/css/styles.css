@@ -7,6 +7,8 @@
 .container {
   max-width: 50%;
   min-width: 600px;
+  height: fit-content;
+  padding: 1rem;
   margin: auto;
   background-color: green;
   overflow: hidden;
@@ -18,16 +20,31 @@ nav {
 }
 
 table {
-  border-spacing: 0px;
   margin: auto;
   width: 80%;
 }
 
-.table th {
+.btn {
+  padding: 0 3px;
+}
+.btn:hover {
+  border: 2px solid black;
+}
+
+.table {
+  border-collapse: collapse;
+}
+.table td {
   text-align: center;
 }
-td{
-  text-align: center;
+.table tr {
+  border-bottom: 1px solid white;
+}
+.table tr:first-child {
+  background-color: #025802;
+}
+.table tr:hover {
+  background-color: white;
 }
 
 a {
