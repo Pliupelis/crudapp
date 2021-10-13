@@ -1,0 +1,35 @@
+$whiteish:#eee;
+$light:rgb(167, 167, 167);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+max-width: 50%;
+min-width: 600px;
+margin: auto;
+background-color: green;
+overflow: hidden;
+}
+nav{
+    width: fit-content;
+    margin: auto;
+}
+table{
+    border-spacing: 0px;
+    margin: auto;
+    width: 80%;
+}
+.table{
+    td th{
+        text-align: center;
+    }
+}
+a{
+
+    text-decoration: none;
+}
+
+
