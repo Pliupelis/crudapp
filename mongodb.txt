@@ -1,0 +1,7 @@
+//mongo - tu run shell
+//use databasename
+//show collections
+//db.databasename.count() db.databasename.update()
+//db.databasename.remove()
+//.find()  db.stats()-datab info
+//crud create read update delete
