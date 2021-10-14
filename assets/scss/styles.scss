@@ -1,76 +1,113 @@
 $whiteish: #eee;
-$light: rgb(167, 167, 167);
-$darker: rgb(134, 134, 134);
+$light: rgb(228, 228, 228);
+$darker: rgb(214, 214, 214);
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+.main-wrap {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem 0 0 0;
+}
 
 .container {
+  position: relative;
   max-width: 50%;
   min-width: 600px;
   height: fit-content;
-  padding: 1rem;
+  padding: 2rem 0 2rem 0;
   margin: auto;
-  background-color: green;
+  background-color: rgb(170, 253, 170);
   overflow: hidden;
+  border-radius: 10px;
 }
+
 nav {
   width: fit-content;
   margin: auto;
-}
-.radio {
-  display: inline;
+  a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+    font-size: 15px;
+  }
 }
 .form {
   margin: auto;
   width: 80%;
   text-align: center;
 }
-
-.btn{
-  padding: 0 3px;
-  &:hover {
-    border: 2px solid black;
-  }
-}
 table {
   margin: auto;
   width: 80%;
 }
-#add_user .form-group{
-padding: .1rem 0;
-label{
+
+#add_user .form-group {
+  display: flex;
+  .radio {
+    flex-flow: wrap row;
+  }
+  label {
     padding-right: 5px;
-}
-.btn{
-    padding: .5rem 0;
-    width: 100%;
+  }
+  button.btn {
+    display: block;
+    padding: 0.5rem 0.5rem;
+    width: 80%;
+    margin: auto;
     font-weight: bold;
     background-color: $light;
+    border-radius: 10px;
+  }
+  .btn:hover {
+    background-color: $darker;
+  }
 }
-.btn:hover{
-    background-color: $darker ;
+#add_user .form-group:nth-child(5) {
+  padding: 1rem 0 0 0;
 }
-
+#add_user .form-group:nth-child(3) {
+  padding: 0.5rem 0 0 0;
 }
 .table {
   border-collapse: collapse;
   td {
     text-align: center;
   }
+  td:last-child {
+    width: 70px;
+  }
   tr {
     border-bottom: 1px solid white;
+    height: 30px;
   }
   tr:first-child {
+    height: 20px;
     pointer-events: none;
-    background-color: rgb(2, 88, 2);
+    background-color: rgb(96, 195, 96);
   }
   tr:hover {
     background-color: white;
+    transition: background-color 0.5s ease;
   }
 }
-a {
-  text-decoration: none;
+.box-nav {
+  padding: 2rem 1rem;
+  a {
+    position: absolute;
+    text-decoration: none;
+    span {
+      color: #000;
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-weight: bolder;
+      font-size: 15px;
+    }
+    &:hover {
+      font-size: 17px;
+      transition: font-size 0.5s ease;
+    }
+  }
 }

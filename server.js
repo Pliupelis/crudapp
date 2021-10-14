@@ -25,6 +25,9 @@ app.use('/js', express.static(path.resolve(__dirname,"assets/js")))
 
 
 app.get('/', (req, res)=>{
-    res.send("crud app")
+    res.render('index')
+})
+app.get('/add-user', (req, res)=>{
+    res.render('user')
 })
 app.listen(PORT,()=>{console.log(`running ${PORT}`)})

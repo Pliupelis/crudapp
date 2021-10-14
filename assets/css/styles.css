@@ -4,23 +4,34 @@
   box-sizing: border-box;
 }
 
+.main-wrap {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem 0 0 0;
+}
+
 .container {
+  position: relative;
   max-width: 50%;
   min-width: 600px;
   height: fit-content;
-  padding: 1rem;
+  padding: 2rem 0 2rem 0;
   margin: auto;
-  background-color: green;
+  background-color: #aafdaa;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 nav {
   width: fit-content;
   margin: auto;
 }
-
-.radio {
-  display: inline;
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bolder;
+  font-size: 15px;
 }
 
 .form {
@@ -29,32 +40,39 @@ nav {
   text-align: center;
 }
 
-.btn {
-  padding: 0 3px;
-}
-.btn:hover {
-  border: 2px solid black;
-}
-
 table {
   margin: auto;
   width: 80%;
 }
 
 #add_user .form-group {
-  padding: 0.1rem 0;
+  display: flex;
+}
+#add_user .form-group .radio {
+  flex-flow: wrap row;
 }
 #add_user .form-group label {
   padding-right: 5px;
 }
-#add_user .form-group .btn {
-  padding: 0.5rem 0;
-  width: 100%;
+#add_user .form-group button.btn {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  width: 80%;
+  margin: auto;
   font-weight: bold;
-  background-color: #a7a7a7;
+  background-color: #e4e4e4;
+  border-radius: 10px;
 }
 #add_user .form-group .btn:hover {
-  background-color: #868686;
+  background-color: #d6d6d6;
+}
+
+#add_user .form-group:nth-child(5) {
+  padding: 1rem 0 0 0;
+}
+
+#add_user .form-group:nth-child(3) {
+  padding: 0.5rem 0 0 0;
 }
 
 .table {
@@ -63,19 +81,39 @@ table {
 .table td {
   text-align: center;
 }
+.table td:last-child {
+  width: 70px;
+}
 .table tr {
   border-bottom: 1px solid white;
+  height: 30px;
 }
 .table tr:first-child {
+  height: 20px;
   pointer-events: none;
-  background-color: #025802;
+  background-color: #60c360;
 }
 .table tr:hover {
   background-color: white;
+  transition: background-color 0.5s ease;
 }
 
-a {
+.box-nav {
+  padding: 2rem 1rem;
+}
+.box-nav a {
+  position: absolute;
   text-decoration: none;
+}
+.box-nav a span {
+  color: #000;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-weight: bolder;
+  font-size: 15px;
+}
+.box-nav a:hover {
+  font-size: 17px;
+  transition: font-size 0.5s ease;
 }
 
 /*# sourceMappingURL=styles.css.map */
