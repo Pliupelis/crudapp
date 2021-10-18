@@ -7,8 +7,7 @@ name: {
 },
 email: {
     type: String,
-    required: true,
-    unique: true
+    sparse: true
 },
 gender: String,
 status: String
