@@ -47,12 +47,11 @@ table {
 
 #add_user .form-group {
   display: flex;
-}
-#add_user .form-group .radio {
-  flex-flow: wrap row;
+  justify-content: space-between;
 }
 #add_user .form-group label {
-  padding-right: 5px;
+  width: 60px;
+  padding: 0 0 0 0.4rem;
 }
 #add_user .form-group button.btn {
   display: block;
@@ -67,10 +66,6 @@ table {
   background-color: #d6d6d6;
 }
 
-#add_user .form-group:nth-child(5) {
-  padding: 1rem 0 0 0;
-}
-
 #add_user .form-group:nth-child(3) {
   padding: 0.5rem 0 0 0;
 }
@@ -82,7 +77,12 @@ table {
   text-align: center;
 }
 .table td:last-child {
-  width: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
 }
 .table tr {
   border-bottom: 1px solid white;
@@ -98,22 +98,32 @@ table {
   transition: background-color 0.5s ease;
 }
 
-.box-nav {
-  padding: 2rem 1rem;
-}
-.box-nav a {
-  position: absolute;
-  text-decoration: none;
-}
-.box-nav a span {
+.text {
   color: #000;
   font-family: "Lucida Console", "Courier New", monospace;
   font-weight: bolder;
   font-size: 15px;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
 }
-.box-nav a:hover {
-  font-size: 17px;
-  transition: font-size 0.5s ease;
+.text:hover {
+  background-color: #eee;
+  transition: background-color 0.5s ease;
+}
+
+.box-nav {
+  padding: 1rem;
+}
+.box-nav a {
+  text-decoration: none;
+}
+
+.container-options {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
