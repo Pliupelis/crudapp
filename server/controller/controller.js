@@ -22,7 +22,7 @@ exports.create = (req, res)=>{
         .save(user)
         .then(data =>{
             
-            res.redirect('/add-user')
+            res.redirect('/')
         })
         .catch(err=>{
             res.status(500).send({
@@ -60,7 +60,8 @@ exports.update = (req, res)=>{
         return res
             .status(400)
             .send({ message : "Data to update can not be empty"})
-    }
+        
+            }
 
     const id = req.params.id;
     userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})

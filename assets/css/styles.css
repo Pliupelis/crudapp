@@ -13,8 +13,8 @@
 
 .container {
   position: relative;
-  max-width: 50%;
-  min-width: 600px;
+  max-width: 80%;
+  min-width: 300px;
   height: fit-content;
   padding: 2rem 0 2rem 0;
   margin: auto;
@@ -50,8 +50,11 @@ table {
   justify-content: space-between;
 }
 #add_user .form-group label {
-  width: 60px;
-  padding: 0 0 0 0.4rem;
+  width: fit-content;
+  padding: 0 0.3rem 0 0;
+}
+#add_user .form-group label.push {
+  padding-right: 0.4rem;
 }
 #add_user .form-group button.btn {
   display: block;

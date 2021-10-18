@@ -1,8 +1,11 @@
 $("#add_user").submit(function(event){
     alert("data inserted succ")
+    load('/')
+    
 })
 $("#update_user").submit(function(event){
     event.preventDefault();
+
 
     var unindexed_array = $(this).serializeArray();
     var data = {}
@@ -20,6 +23,7 @@ $("#update_user").submit(function(event){
 
     $.ajax(request).done(function(response){
         alert("Data Updated Successfully!");
+        location.replace('/')
     })
 
 })
