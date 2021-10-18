@@ -3,12 +3,19 @@ const app = express()
 const path = require("path")
 const dotenv = require("dotenv")
 const morgan = require("morgan")
-const { set } = require("mongoose")
+const { set, connection } = require("mongoose")
 const route = express.Router()
+
 dotenv.config({path:'config.env'})
 const PORT = process.env.PORT || 8080
+const connectDB = require('./server/database/connection')
+
 //log req
 app.use(morgan("tiny"))
+
+//mongodb connection
+connectDB()
+
 app.use(express.json());
 app.use(express.urlencoded({
   extended: true }))
@@ -22,12 +29,6 @@ app.use('/css', express.static(path.resolve(__dirname,"assets/css")))
 app.use('/img', express.static(path.resolve(__dirname,"assets/img")))
 app.use('/js', express.static(path.resolve(__dirname,"assets/js")))
 
-
-
-app.get('/', (req, res)=>{
-    res.render('index')
-})
-app.get('/add-user', (req, res)=>{
-    res.render('user')
-})
+//load routers
+app.use('/', require('./server/routes/router'))
 app.listen(PORT,()=>{console.log(`running ${PORT}`)})
